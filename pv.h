@@ -20,18 +20,18 @@ void printVVec(std::vector<std::vector<T>> t) {
 
 class ListNode{
 public:
-    ListNode():val_(0),next_(nullptr){}
-    ListNode(int value):val_(value),next_(nullptr){}
-    ListNode(int value, ListNode* next):val_(value),next_(next){}
+    ListNode(): val(0), next(nullptr){}
+    ListNode(int value): val(value), next(nullptr){}
+    ListNode(int value, ListNode* next): val(value), next(next){}
 public:
-    int val_;
-    ListNode* next_;
+    int val;
+    ListNode* next;
 };
 void printList(ListNode* head) {
-    while(head->next_!= nullptr)
+    while(head->next != nullptr)
     {
-        std::cout<<head->val_<<"\t";
-        head=head->next_;
+        std::cout << head->val << "\t";
+        head=head->next;
     }
-    std::cout<<head->val_<<std::endl;
+    std::cout << head->val << std::endl;
 }
