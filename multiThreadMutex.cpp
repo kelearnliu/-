@@ -27,4 +27,11 @@ int main() {
     thread1.join();
     thread2.join();
     return 0;
+}int main() {
+    std::thread thread1(increment);
+    std::thread thread2(increment);
+    std::cout<<"main:"<<getpid()<<"\t"<<"main thread:"<<std::this_thread::get_id()<<std::endl;
+    thread1.join();
+    thread2.join();
+    return 0;
 }
