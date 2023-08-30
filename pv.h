@@ -35,3 +35,27 @@ void printList(ListNode* head) {
     }
     std::cout << head->val << std::endl;
 }
+
+
+class TreeNode{
+public:
+    TreeNode():val(0),left(nullptr),right(nullptr){}
+    TreeNode(size_t value): val(value),left(nullptr),right(nullptr){}
+    TreeNode(size_t value,TreeNode* left,TreeNode* right): val(value),left(left),right(right){}
+public:
+    size_t val;
+    TreeNode* left;
+    TreeNode* right;
+};
+
+TreeNode* buildTree(std::vector<size_t>array, int index)
+{
+    TreeNode* root = nullptr;
+    if(index<array.size() && array[index]!=111)
+    {
+        root= new TreeNode(array[index]);
+        root->left= buildTree(array,2*index+1);
+        root->right= buildTree(array,2*index+2);
+    }
+    return root;
+}

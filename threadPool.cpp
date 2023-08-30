@@ -87,6 +87,5 @@ int main() {
             std::cout<<"task : "<<i<<"is done"<<std::endl;
         });
     }
-
     return 0;
 }

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
 project(Algorithm)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 11)
 
 # 当前文件夹下面的所有.h文件包含进去
 include_directories(${CMAKE_SOURCE_DIR})
@@ -14,8 +14,10 @@ add_executable(multiThreadConditionVariable multiThreadConditionVariable.cpp)
 add_executable(multiThreadMutex multiThreadMutex.cpp)
 add_executable(ProducerAndConsumer ProducerAndConsumer.cpp)
 add_executable(threadPool threadPool.cpp)
+add_executable(threadPool2 threadpool2.cpp)
 add_executable(future future.cpp)
 add_executable(promise promise.cpp)
+add_executable(SharedPtr sharedPtr.cpp)
 
 add_executable(threeSum threeSum.cpp)
 add_executable(fourSum fourSum.cpp)
