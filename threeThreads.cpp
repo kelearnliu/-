@@ -28,7 +28,7 @@ void printB()
     {
         std::unique_lock<std::mutex> lock(mtx);
         // flag=0时打印A 否则阻塞在这里
-        cv.wait(lock,[]{return flag==1;});
+        cv.wait(lock,[](){return flag==1;});
         std::cout<<"B"<<std::endl;
         flag=(flag+1)%mod;
         std::this_thread::sleep_for(std::chrono::seconds (1));
