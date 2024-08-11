@@ -10,7 +10,7 @@ struct ListNode1 {
     int val;
     ListNode1* next;
     ListNode1() :val(0), next(nullptr) {}
-    ListNode1(int value) :val(value), next(nullptr) {}
+    explicit ListNode1(int value) :val(value), next(nullptr) {}
     ListNode1(int value, ListNode1* next): val(value),next(next){}
 };
 
