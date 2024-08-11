@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.20)
 project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -42,3 +42,5 @@ add_executable(BinaryTree binaryTree.cpp)
 add_executable(lengthOfLIS lengthOfLIS.cpp)
 add_executable(maxSum maxSum.cpp)
 add_executable(Sort10 Sort10.cpp)
+
+add_executable(newSyncThread newSyncThread.cpp)
